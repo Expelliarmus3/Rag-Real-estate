@@ -36,30 +36,39 @@ real-estate-search/
 Since ScaleDown is a local dependency, link it to your project:
 
 Bash
-# Navigate to your local ScaleDown clone
-- cd path/to/scaledown
-- pip install -e .
+### Navigate to your local ScaleDown clone
+| cd path/to/scaledown
+| pip install -e .
 
-# Navigate back to this project
-- cd path/to/real-estate-search
-- pip install google-genai python-dotenv
+### Navigate back to this project
+| cd path/to/real-estate-search
+| pip install google-genai python-dotenv
+  
 2. Configure Environment Variables
+   
 Create a .env file in the root directory:
 
 Plaintext
-- SCALEDOWN_API_KEY=your_scaledown_key
-- GEMINI_API_KEY=your_gemini_key
+| SCALEDOWN_API_KEY=your_scaledown_key
+| GEMINI_API_KEY=your_gemini_key
+  
 3. Run Ingestion
+   
 Compress your raw data into the optimized search index:
 
 Bash
-- python src/ingestion.py
+| python src/ingestion.py
+  
 4. Search & Ask
+   
 Run the main RAG application to query the database:
 
 Bash
-python src/main.py
+
+| python src/main.py
+
 🔍 How it Works
+
 Ingestion: ScaleDownCompressor processes long listings into searchable fragments.
 
 Retrieval: The system performs a case-insensitive keyword match on the compressed text while applying hard metadata filters (e.g., Price < $900k).
@@ -67,8 +76,9 @@ Retrieval: The system performs a case-insensitive keyword match on the compresse
 Generation: The top matching listings are passed as a "dense context" to Gemini 2.5 Flash, which provides a conversational recommendation.
 
 📈 Future Roadmap
-[ ] Vector DB Integration: Move from local JSON to Milvus for million-scale listings.
 
-[ ] Fuzzy Search: Implement thefuzz for better keyword matching (e.g., "garden" matching "backyard").
+[] Vector DB Integration: Move from local JSON to Milvus for million-scale listings.
 
-[ ] Web UI: Build a Streamlit dashboard for interactive searching.
+[] Fuzzy Search: Implement thefuzz for better keyword matching (e.g., "garden" matching "backyard").
+
+[] Web UI: Build a Streamlit dashboard for interactive searching.
