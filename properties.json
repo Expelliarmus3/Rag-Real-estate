@@ -1,0 +1,28 @@
+[
+  {
+    "id": "p1",
+    "title": "Modern Tech-Hub Oasis",
+    "description": "A stunning 3-bedroom, 2-bathroom contemporary home located just minutes from the main tech campus. This property features an expansive open-floor plan, floor-to-ceiling windows that capture the sunset perfectly, and a high-end chef's kitchen with marble countertops. The backyard is a private retreat with a sustainable organic garden and a small stone firepit for evening gatherings.",
+    "metadata": {
+      "price": 850000,
+      "city": "Austin",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2100,
+      "type": "House"
+    }
+  },
+  {
+    "id": "p2",
+    "title": "Vintage Charm Bungalow",
+    "description": "Step back in time with this beautifully maintained 1920s bungalow. Located in the historic district, it boasts original oak hardwood floors, vintage crown molding, and a wrap-around porch perfect for morning coffee. While it retains its classic soul, the electrical and plumbing systems have been fully modernized for peace of mind. Includes a detached garage that could be a perfect studio.",
+    "metadata": {
+      "price": 625000,
+      "city": "Austin",
+      "beds": 2,
+      "baths": 1,
+      "sqft": 1400,
+      "type": "Bungalow"
+    }
+  }
+]
